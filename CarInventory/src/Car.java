@@ -1,13 +1,26 @@
 public class Car {
     
-
     private String Make;
     public String Model;
-    private static final int WARRANTY = 60_000;
     private double currentMileage;
-
     private double remainingWarrantyMileage;
+    private static final int WARRANTY = 60_000;
   
+
+    //Default Constructor
+    public Car(){
+        this.Make = "N/A";
+        this.Model = "N/A";
+        this.currentMileage = 0.0;
+    }
+    //Overloaded Constructor
+    public Car(String make, String model, double mileage){
+        Make = make;
+        Model = model;
+        currentMileage = mileage;
+        determineWarrantyMileageExpiration();
+
+    }
 
     //Setter and Getter
     public void setMake(String make){
@@ -48,7 +61,7 @@ public class Car {
     }
 
     //ToString method
-    @Override
+    @Override  //Annotation
     public String toString(){
         return String.format("Make: " + Make +  " Model: " + Model + " Current Mileage: " + currentMileage + " Mileage to Warranty Expire: " + remainingWarrantyMileage);
     }

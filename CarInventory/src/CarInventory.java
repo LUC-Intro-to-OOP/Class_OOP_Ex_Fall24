@@ -13,10 +13,10 @@ public class CarInventory {
         //Looping Structure to populate each object instance defined in cars array
         for(var i = 0; i < cars.length; i++){
             //create object instance
-            cars[i] = new Car();
-            cars[i].setMake("Lotus");  //setting the value for make property
-            cars[i].setModel("Eclipse");
-            cars[i].setCurrentMileage(2300);
+           
+           
+            //create object instance
+            cars[i] = new Car("Lotus", "Eclipse", 2300.00);
 
         }
 
