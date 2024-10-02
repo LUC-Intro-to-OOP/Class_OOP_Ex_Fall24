@@ -7,7 +7,7 @@ public class CarInventory {
         Scanner input = new Scanner(System.in);
 
         //Array that holds 2 Car Objects
-        Car [] cars = new Car[2];
+        HybridCar [] cars = new HybridCar[2];
 
 
         //Looping Structure to populate each object instance defined in cars array
@@ -16,7 +16,7 @@ public class CarInventory {
            
            
             //create object instance
-            cars[i] = new Car("Lotus", "Eclipse", 2300.00);
+            cars[i] = new HybridCar("Lotus", "Eclipse", 2300.00); //Constructor
 
         }
 
@@ -24,6 +24,9 @@ public class CarInventory {
         for(var x = 0; x < cars.length; x++){
             System.out.println(cars[x].getMake() + " " + cars[x].getModel() + " " + cars[x].getMileage() + " " + cars[x].outputRemainingWarrantyMileage());
         }
+
+     
+  
   
 
         /*carOne.setMake("Lotus");  //setting the value for make property
